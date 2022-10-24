@@ -27,7 +27,6 @@ def mostrar_lanches(lanches,comprovante,pedido):
 # A definicao comprar_lanches definira o lanche escolhido e a quantidade, ele ira calcular tambem o valor total, caso o pedido concluido ele tambem dara um ticket
 # para o usuario com informacoes para entregar e de compra
 
-
 def comprar_lanches(lanches,comprovante,pedido):
     print('Qual lanche o senhor gostaria de comer? ')
     lanche_comprar = int(input())
@@ -49,7 +48,7 @@ def comprar_lanches(lanches,comprovante,pedido):
             print('Voce comprou', comprovante)
             print('Iremos entregar em {}'.format(endereco))
         elif conf_comp == 1:
-            comprovante = pedido
+            comprovante = pedido + comprovante
             mostrar_lanches(lanches,comprovante,pedido)
             comprar_lanches(lanches,comprovante,pedido)
             
@@ -59,4 +58,4 @@ mostrar_lanches(lanches,comprovante,pedido)
 comprar_lanches(lanches,comprovante,pedido)
 
 
-# Existe 1 bug que ele nao adiciona 3 strings no comprovante e nao estou conseguindo quebrar a linha do comprovante tb
+# nao estou conseguindo quebrar a linha do comprovante tb
