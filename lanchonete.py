@@ -59,4 +59,4 @@ mostrar_lanches(lanches,comprovante,pedido)
 comprar_lanches(lanches,comprovante,pedido)
 
 
-# Essa versao esta com apena 1 bug, quando o usuario pede algo mais o programa nao soma com o anterior, tentei de algumas formas mas ainda nao deu.
+# Existe 1 bug que ele nao adiciona 3 strings no comprovante e nao estou conseguindo quebrar a linha do comprovante tb
