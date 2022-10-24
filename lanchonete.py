@@ -39,16 +39,16 @@ def comprar_lanches(lanches,comprovante,pedido):
         mostrar_lanches(lanches,comprovante,pedido)
         comprar_lanches(lanches,comprovante,pedido)
     elif conf == 0:
-        pedido = ('{} {}  por R$ {},00'.format(quantidade, lanches[lanche_comprar][0], quantidade*lanches[lanche_comprar][1]))
-        comprovante =  (comprovante + pedido)
+        pedido = ('{} {}  por R$ {},00 \n'.format(quantidade, lanches[lanche_comprar][0], quantidade*lanches[lanche_comprar][1]))
+        comprovante =  comprovante + pedido
         print('Muito Bem, podemos concluir seu pedido ou gostaria de pedir algo mais? 0 - Sim,concluir | 1 - Pedir algo mais')
         conf_comp = int(input())
         if conf_comp == 0:
             print('Muito bem {}'.format(nome))
-            print('Voce comprou', comprovante)
+            print('Voce comprou\n', comprovante)
             print('Iremos entregar em {}'.format(endereco))
         elif conf_comp == 1:
-            comprovante = pedido + comprovante
+            # comprovante = comprovante +  pedido
             mostrar_lanches(lanches,comprovante,pedido)
             comprar_lanches(lanches,comprovante,pedido)
             
@@ -58,4 +58,4 @@ mostrar_lanches(lanches,comprovante,pedido)
 comprar_lanches(lanches,comprovante,pedido)
 
 
-# nao estou conseguindo quebrar a linha do comprovante tb
+# projeto concluido
