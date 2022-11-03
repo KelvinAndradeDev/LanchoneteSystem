@@ -62,7 +62,6 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
     while True:
         try:
             conf = int(input('Podemos confirmar esse lanche no seu pedido? 0 - Sim | 1 - Nao\n'))
-
             if conf != 0 or conf != 1:
                 print('Digite 1 ou 0')
 
@@ -71,7 +70,6 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
 
         except ValueError:
             print('Digite 0 para confirmar ou 1 para não confirmar')
-
 
     if conf == 1:
         mostrar_lanches(lanches)
@@ -85,7 +83,6 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
         while True:
             try:
                 conf_comp = int(input('Muito Bem, podemos concluir seu pedido ou gostaria de pedir algo mais? 0 - Sim,concluir | 1 - Pedir algo mais\n'))
-
                 if conf_comp != 0 or conf_comp != 1:
                     print("Escolha entre 1 ou 0")
 
@@ -104,5 +101,4 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
             mostrar_lanches(lanches)
             comprar_lanches(lanches,comprovante,pedido, nome, endereco)
             
-main()
-        
+main()        
