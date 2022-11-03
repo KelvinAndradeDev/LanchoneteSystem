@@ -37,7 +37,6 @@ def mostrar_lanches(lanches):
 
 # A definicao comprar_lanches definira o lanche escolhido e a quantidade, ele ira calcular tambem o valor total, caso o pedido concluido ele tambem dara um ticket
 # para o usuario com informacoes para entregar e de compra
-
 def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
     while True:
         try:
@@ -47,7 +46,6 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
         except ValueError:
             print("Choose a number")
         
-
     while True:
         try:
             quantidade = int(input('Digite a quantidade de lancher que o senhor gostaria.\n'))
@@ -55,7 +53,6 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
 
         except ValueError:
             print('Digite um número')
-
 
     print(f'Muito bem, o senhor comprou {quantidade} {lanches[lanche_comprar][0]} pelo valor de R$ {quantidade*lanches[lanche_comprar][1]},00 .')
     
@@ -74,7 +71,6 @@ def comprar_lanches(lanches,comprovante,pedido, nome, endereco):
     if conf == 1:
         mostrar_lanches(lanches)
         comprar_lanches(lanches,comprovante,pedido, nome, endereco)
-    
     
     elif conf == 0:
         pedido = (f'{quantidade} {lanches[lanche_comprar][0]}  por R$ {quantidade*lanches[lanche_comprar][1]},00 \n')
